@@ -19,9 +19,14 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-primary/20">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-gradient-purple via-gradient-pink to-gradient-orange animate-gradient-shift bg-[length:200%_200%] glow-purple" />
-              <h1 className="text-2xl font-bold">ZENT</h1>
+            <div className="flex items-center gap-3">
+              <div className="relative w-10 h-10">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg rotate-45" />
+                <div className="absolute inset-[3px] bg-background rounded-lg rotate-45 flex items-center justify-center">
+                  <span className="text-lg font-bold -rotate-45 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Z</span>
+                </div>
+              </div>
+              <h1 className="text-2xl font-bold tracking-tight">ZENT</h1>
             </div>
             <div className="hidden md:flex items-center gap-8">
               {['home', 'about', 'tokenomics', 'dashboard', 'docs', 'contact'].map((section) => (
@@ -63,8 +68,8 @@ const Index = () => {
             Transparency That Pays
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
-            Revolutionary project on Solana with transparent revenue distribution. 
-            70% to holders, 30% for ecosystem development.
+            Revolutionary project on Solana with transparent SOL distribution. 
+            70% to holders in SOL, 30% for ecosystem development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -108,7 +113,7 @@ const Index = () => {
               {
                 icon: 'TrendingUp',
                 title: 'Fair Model',
-                description: '70% of all trading fees are distributed directly to token holders'
+                description: '70% of all trading fees are distributed directly to holders in SOL'
               }
             ].map((feature, i) => (
               <Card 
@@ -141,7 +146,7 @@ const Index = () => {
                 </div>
                 <Progress value={70} className="h-3 mb-4" />
                 <p className="text-muted-foreground">
-                  The majority of all trading fees are distributed directly to token holders
+                  The majority of all trading fees are distributed directly to holders in SOL
                 </p>
               </Card>
               
@@ -231,8 +236,8 @@ const Index = () => {
 
           <div className="grid md:grid-cols-4 gap-6 mb-12">
             {[
-              { label: 'Total Fees', value: '$247,892', icon: 'DollarSign', color: 'purple' },
-              { label: 'Distributed to Holders', value: '$173,524', icon: 'TrendingUp', color: 'pink' },
+              { label: 'Total Fees', value: '1,247 SOL', icon: 'DollarSign', color: 'purple' },
+              { label: 'Distributed to Holders', value: '873 SOL', icon: 'TrendingUp', color: 'pink' },
               { label: 'Buyback', value: '$52,057', icon: 'ArrowUpCircle', color: 'orange' },
               { label: 'Partnerships', value: '$22,311', icon: 'Handshake', color: 'blue' }
             ].map((stat, i) => (
@@ -291,21 +296,21 @@ const Index = () => {
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium">Holders (70%)</span>
-                      <span className="text-sm text-muted-foreground">$173,524</span>
+                      <span className="text-sm text-muted-foreground">873 SOL</span>
                     </div>
                     <Progress value={70} className="h-4" />
                   </div>
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium">Buyback (20%)</span>
-                      <span className="text-sm text-muted-foreground">$52,057</span>
+                      <span className="text-sm text-muted-foreground">261 SOL</span>
                     </div>
                     <Progress value={20} className="h-4" />
                   </div>
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium">Партнерства (10%)</span>
-                      <span className="text-sm text-muted-foreground">$22,311</span>
+                      <span className="text-sm text-muted-foreground">112 SOL</span>
                     </div>
                     <Progress value={10} className="h-4" />
                   </div>

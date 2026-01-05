@@ -63,10 +63,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				gradient: {
-					purple: '#9b87f5',
-					pink: '#D946EF',
-					orange: '#F97316',
-					blue: '#0EA5E9'
+					purple: '#8B7BC4',
+					pink: '#B855C8',
+					orange: '#D97344',
+					blue: '#4A9FCC'
 				}
 			},
 			borderRadius: {

@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 222 47% 5%;
+    --foreground: 210 20% 92%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 222 47% 7%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 222 47% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 20% 92%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 262 60% 52%;
+    --primary-foreground: 210 20% 98%;
 
-    --secondary: 328 86% 70%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 328 55% 58%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 222 47% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 222 30% 18%;
+    --muted-foreground: 215 15% 60%;
 
-    --accent: 24 95% 53%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 24 70% 48%;
+    --accent-foreground: 210 20% 98%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 222 47% 15%;
-    --input: 222 47% 15%;
-    --ring: 262 83% 58%;
+    --border: 222 30% 20%;
+    --input: 222 30% 20%;
+    --ring: 262 60% 52%;
 
     --radius: 1rem;
 
@@ -70,20 +70,20 @@
 @layer utilities {
   .glow-purple {
     box-shadow:
-      0 0 20px rgba(155, 135, 245, 0.5),
-      0 0 40px rgba(155, 135, 245, 0.3);
+      0 0 15px rgba(155, 135, 245, 0.2),
+      0 0 30px rgba(155, 135, 245, 0.1);
   }
 
   .glow-pink {
     box-shadow:
-      0 0 20px rgba(217, 70, 239, 0.5),
-      0 0 40px rgba(217, 70, 239, 0.3);
+      0 0 15px rgba(217, 70, 239, 0.2),
+      0 0 30px rgba(217, 70, 239, 0.1);
   }
 
   .glow-orange {
     box-shadow:
-      0 0 20px rgba(249, 115, 22, 0.5),
-      0 0 40px rgba(249, 115, 22, 0.3);
+      0 0 15px rgba(249, 115, 22, 0.2),
+      0 0 30px rgba(249, 115, 22, 0.1);
   }
 
   .animate-float {
@@ -101,8 +101,8 @@
   }
 
   .glass {
-    background: rgba(34, 34, 47, 0.5);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(155, 135, 245, 0.2);
+    background: rgba(20, 20, 30, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(155, 135, 245, 0.15);
   }
 }
