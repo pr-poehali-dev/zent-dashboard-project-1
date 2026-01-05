@@ -30,11 +30,11 @@ const Index = () => {
                   onClick={() => scrollToSection(section)}
                   className="text-sm font-medium hover:text-primary transition-colors capitalize"
                 >
-                  {section === 'home' ? 'Главная' : 
-                   section === 'about' ? 'О проекте' :
+                  {section === 'home' ? 'Home' : 
+                   section === 'about' ? 'About' :
                    section === 'tokenomics' ? 'Tokenomics' :
                    section === 'dashboard' ? 'Dashboard' :
-                   section === 'docs' ? 'Документация' : 'Контакты'}
+                   section === 'docs' ? 'Documentation' : 'Contact'}
                 </button>
               ))}
             </div>
@@ -63,8 +63,8 @@ const Index = () => {
             Transparency That Pays
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
-            Революционный проект на базе Solana с прозрачным распределением доходов. 
-            70% держателям, 30% на развитие экосистемы.
+            Revolutionary project on Solana with transparent revenue distribution. 
+            70% to holders, 30% for ecosystem development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -72,7 +72,7 @@ const Index = () => {
               className="bg-gradient-to-r from-gradient-purple to-gradient-pink glow-purple text-lg px-8"
               onClick={() => scrollToSection('about')}
             >
-              Узнать больше
+              Learn More
               <Icon name="ArrowRight" className="ml-2" size={20} />
             </Button>
             <Button 
@@ -91,24 +91,24 @@ const Index = () => {
       <section id="about" className="min-h-screen flex items-center py-20 px-6">
         <div className="container mx-auto">
           <h3 className="text-5xl font-bold text-center mb-16 animate-fade-in">
-            О проекте
+            About Project
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: 'Shield',
-                title: 'Прозрачность',
-                description: 'Полная прозрачность всех транзакций и распределения средств через публичный Dashboard'
+                title: 'Transparency',
+                description: 'Full transparency of all transactions and revenue distribution through public Dashboard'
               },
               {
                 icon: 'Zap',
                 title: 'Solana',
-                description: 'Работаем на блокчейне Solana — быстрые транзакции и минимальные комиссии'
+                description: 'Built on Solana blockchain — fast transactions and minimal fees'
               },
               {
                 icon: 'TrendingUp',
-                title: 'Честная модель',
-                description: '70% всех комиссий напрямую распределяются между держателями токена'
+                title: 'Fair Model',
+                description: '70% of all trading fees are distributed directly to token holders'
               }
             ].map((feature, i) => (
               <Card 
@@ -136,35 +136,35 @@ const Index = () => {
             <div className="space-y-8">
               <Card className="glass p-8 border-primary/20">
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-2xl font-semibold">Держателям</h4>
+                  <h4 className="text-2xl font-semibold">To Holders</h4>
                   <span className="text-4xl font-bold text-gradient-purple">70%</span>
                 </div>
                 <Progress value={70} className="h-3 mb-4" />
                 <p className="text-muted-foreground">
-                  Большая часть всех комиссий от торговли распределяется напрямую держателям токена
+                  The majority of all trading fees are distributed directly to token holders
                 </p>
               </Card>
               
               <Card className="glass p-8 border-secondary/20">
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-2xl font-semibold">Buyback & Партнерства</h4>
+                  <h4 className="text-2xl font-semibold">Buyback & Partnerships</h4>
                   <span className="text-4xl font-bold text-gradient-pink">30%</span>
                 </div>
                 <Progress value={30} className="h-3 mb-4" />
                 <p className="text-muted-foreground">
-                  30% направляется на выкуп токенов и развитие стратегических партнерств
+                  30% goes to token buyback and strategic partnerships development
                 </p>
               </Card>
 
               <div className="grid grid-cols-2 gap-4">
                 <Card className="glass p-6 border-accent/20 text-center">
                   <Icon name="Users" className="mx-auto mb-2 text-gradient-blue" size={32} />
-                  <p className="text-sm text-muted-foreground mb-1">Держателей</p>
+                  <p className="text-sm text-muted-foreground mb-1">Holders</p>
                   <p className="text-2xl font-bold">12,847</p>
                 </Card>
                 <Card className="glass p-6 border-accent/20 text-center">
                   <Icon name="Coins" className="mx-auto mb-2 text-gradient-orange" size={32} />
-                  <p className="text-sm text-muted-foreground mb-1">В обороте</p>
+                  <p className="text-sm text-muted-foreground mb-1">In Circulation</p>
                   <p className="text-2xl font-bold">5.2M</p>
                 </Card>
               </div>
@@ -210,7 +210,7 @@ const Index = () => {
                     </defs>
                   </svg>
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <p className="text-sm text-muted-foreground mb-2">Распределение</p>
+                    <p className="text-sm text-muted-foreground mb-2">Distribution</p>
                     <p className="text-4xl font-bold">70/30</p>
                   </div>
                 </div>
@@ -226,15 +226,15 @@ const Index = () => {
             Dashboard
           </h3>
           <p className="text-center text-muted-foreground mb-16">
-            Прозрачность в реальном времени
+            Real-time Transparency
           </p>
 
           <div className="grid md:grid-cols-4 gap-6 mb-12">
             {[
-              { label: 'Общая комиссия', value: '$247,892', icon: 'DollarSign', color: 'purple' },
-              { label: 'Распределено держателям', value: '$173,524', icon: 'TrendingUp', color: 'pink' },
-              { label: 'На buyback', value: '$52,057', icon: 'ArrowUpCircle', color: 'orange' },
-              { label: 'Партнерства', value: '$22,311', icon: 'Handshake', color: 'blue' }
+              { label: 'Total Fees', value: '$247,892', icon: 'DollarSign', color: 'purple' },
+              { label: 'Distributed to Holders', value: '$173,524', icon: 'TrendingUp', color: 'pink' },
+              { label: 'Buyback', value: '$52,057', icon: 'ArrowUpCircle', color: 'orange' },
+              { label: 'Partnerships', value: '$22,311', icon: 'Handshake', color: 'blue' }
             ].map((stat, i) => (
               <Card 
                 key={i}
@@ -256,13 +256,13 @@ const Index = () => {
           <Tabs defaultValue="revenue" className="space-y-8">
             <TabsList className="glass border border-primary/20 p-1">
               <TabsTrigger value="revenue" className="data-[state=active]:bg-primary/20">
-                Динамика доходов
+                Revenue Dynamics
               </TabsTrigger>
               <TabsTrigger value="distribution" className="data-[state=active]:bg-primary/20">
-                Распределение
+                Distribution
               </TabsTrigger>
               <TabsTrigger value="holders" className="data-[state=active]:bg-primary/20">
-                Держатели
+                Holders
               </TabsTrigger>
             </TabsList>
 
@@ -290,7 +290,7 @@ const Index = () => {
                 <div className="space-y-6">
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium">Держатели (70%)</span>
+                      <span className="text-sm font-medium">Holders (70%)</span>
                       <span className="text-sm text-muted-foreground">$173,524</span>
                     </div>
                     <Progress value={70} className="h-4" />
@@ -334,7 +334,7 @@ const Index = () => {
                         </div>
                         <div>
                           <p className="font-mono text-sm">{holder.address}</p>
-                          <p className="text-xs text-muted-foreground">{holder.percent} от общего</p>
+                          <p className="text-xs text-muted-foreground">{holder.percent} of total</p>
                         </div>
                       </div>
                       <p className="font-semibold">{holder.balance} ZENT</p>
@@ -350,14 +350,14 @@ const Index = () => {
       <section id="docs" className="min-h-screen flex items-center py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <h3 className="text-5xl font-bold text-center mb-16 animate-fade-in">
-            Документация
+            Documentation
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: 'FileText', title: 'Whitepaper', description: 'Полное описание проекта и технической архитектуры' },
-              { icon: 'Code', title: 'API Docs', description: 'Документация для разработчиков и интеграторов' },
-              { icon: 'BookOpen', title: 'Гайды', description: 'Пошаговые инструкции для пользователей' },
-              { icon: 'Shield', title: 'Audit Report', description: 'Отчет о безопасности смарт-контрактов' }
+              { icon: 'FileText', title: 'Whitepaper', description: 'Complete project description and technical architecture' },
+              { icon: 'Code', title: 'API Docs', description: 'Documentation for developers and integrators' },
+              { icon: 'BookOpen', title: 'Guides', description: 'Step-by-step instructions for users' },
+              { icon: 'Shield', title: 'Audit Report', description: 'Smart contract security audit report' }
             ].map((doc, i) => (
               <Card 
                 key={i}
@@ -368,7 +368,7 @@ const Index = () => {
                 <h4 className="text-xl font-semibold mb-2">{doc.title}</h4>
                 <p className="text-muted-foreground mb-4">{doc.description}</p>
                 <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80">
-                  Открыть
+                  Open
                   <Icon name="ExternalLink" className="ml-2" size={16} />
                 </Button>
               </Card>
@@ -380,10 +380,10 @@ const Index = () => {
       <section id="contact" className="min-h-screen flex items-center py-20 px-6">
         <div className="container mx-auto max-w-2xl text-center">
           <h3 className="text-5xl font-bold mb-8 animate-fade-in">
-            Контакты
+            Contact
           </h3>
           <p className="text-xl text-muted-foreground mb-12">
-            Присоединяйтесь к нашему сообществу и следите за обновлениями
+            Join our community and stay updated
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {[
@@ -414,7 +414,7 @@ const Index = () => {
 
       <footer className="border-t border-primary/20 py-8">
         <div className="container mx-auto px-6 text-center text-sm text-muted-foreground">
-          <p>© 2024 ZENT. Все права защищены.</p>
+          <p>© 2024 ZENT. All rights reserved.</p>
           <p className="mt-2">Transparency That Pays</p>
         </div>
       </footer>
